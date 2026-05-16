@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\Kaustubh\\\\docvisit\" -Exclude \"node_modules\" | Where-Object { $_.FullName -notmatch \"node_modules\" } | Select-Object FullName | Sort-Object FullName)",
+      "PowerShell(node -e \"const c=require\\('crypto'\\); console.log\\(c.randomBytes\\(32\\).toString\\('hex'\\)\\); console.log\\(c.randomBytes\\(32\\).toString\\('hex'\\)\\);\")",
+      "PowerShell(psql *)",
+      "Bash(PGPASSWORD=doctor123 /c/Program Files/PostgreSQL/17/bin/psql *)",
+      "Bash(node migrations/run.js)",
+      "Bash(node migrations/seed.js)",
+      "Bash(PGPASSWORD=doctor123 \"/c/Program Files/PostgreSQL/17/bin/psql\" -U postgres -d docvisit -c \"SELECT name, specialty, home_visit_price, call_price FROM doctors ORDER BY specialty;\")",
+      "Bash(PGPASSWORD=doctor123 \"/c/Program Files/PostgreSQL/17/bin/psql\" -U postgres -d docvisit -c \"SELECT name, phone, address FROM patients;\")",
+      "Bash(node migrations/seed_bookings.js)",
+      "Bash(node index.js)",
+      "Bash(curl -s http://localhost:3000/health)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://localhost:3000/api/doctors)",
+      "Bash(python3 -m json.tool --no-ensure-ascii)",
+      "Bash(curl -s \"http://localhost:3000/api/doctors?specialty=cardiology\")",
+      "Bash(curl -s -X PATCH http://localhost:3000/api/doctors/status -H 'Authorization: Bearer __TRACKED_VAR__' -H 'Content-Type: application/json' -d '{\"status\":\"active\"}')",
+      "Bash(curl -s http://localhost:3000/api/doctors?specialty=general)",
+      "Bash(curl -s http://localhost:3000/api/doctors/661e2c57-670a-448e-9b97-43e51325f86e)",
+      "Bash(curl -s -X PUT http://localhost:3000/api/doctors/profile -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWUyYzU3LTY3MGEtNDQ4ZS05Yjk3LTQzZTUxMzI1Zjg2ZSIsInJvbGUiOiJkb2N0b3IiLCJwaG9uZSI6Iis5MTk4NzY1MDAwMDEiLCJpYXQiOjE3Nzg3NjcwMjAsImV4cCI6MTc3OTM3MTgyMH0.BYZqrnqmNdME3it4Ebqnojv86C1T-EAYBvuTbKDmQI4' -H 'Content-Type: application/json' -d '{\"callPrice\": 220}')",
+      "Bash(curl -s http://localhost:3000/api/bookings -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5YTM3NTFmLWU1Y2YtNGU0Ni1iYWMzLWQ2NGM4NWUwZmQyMyIsInJvbGUiOiJwYXRpZW50IiwicGhvbmUiOiIrOTE5ODAwMDAwMDAxIiwiaWF0IjoxNzc4NzY0OTcwLCJleHAiOjE3NzkzNjk3NzB9.gKidKwAGqPAvbd5TomRNihpNifHIpGPaG09RTqlAu_M')",
+      "Bash(curl -s http://localhost:3000/api/bookings -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWUyYzU3LTY3MGEtNDQ4ZS05Yjk3LTQzZTUxMzI1Zjg2ZSIsInJvbGUiOiJkb2N0b3IiLCJwaG9uZSI6Iis5MTk4NzY1MDAwMDEiLCJpYXQiOjE3Nzg3NjcwMjAsImV4cCI6MTc3OTM3MTgyMH0.BYZqrnqmNdME3it4Ebqnojv86C1T-EAYBvuTbKDmQI4')",
+      "Bash(gh auth *)",
+      "Bash(npx create-expo-app@latest mobile --template tabs)",
+      "Bash(npx expo *)",
+      "Bash(npx tsc *)",
+      "PowerShell($env:ANDROID_HOME = \"$env:LOCALAPPDATA\\\\Android\\\\Sdk\"; & \"$env:LOCALAPPDATA\\\\Android\\\\Sdk\\\\emulator\\\\emulator.exe\" -list-avds 2>&1)",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(git add *)"
+    ]
+  }
+}
